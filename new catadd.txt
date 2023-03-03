@@ -1,0 +1,26 @@
+"SrNo,BarCode,Item Description,Catagory,P_title,Kind,Release Year,Release Date,Age Limit,New Rlease,Edition,Software Formate,Console,Colour,NumberOfControlse,DockChargingPort,WithLedLighting,PSPlusSubscription,Series,Type,Material,Version,VR,Product Url,OtherAttribute";
+"SrNo\tBarCode\tItem Description\tCatagory\tP_title\tKind\tRelease Year\tRelease Date\tAge Limit\tNew Rlease\tEdition\tSoftware Formate\tConsole\tColour\tNumberOfControlse\tDockChargingPort\tWithLedLighting\tPSPlusSubscription\tSeries\tType\tMaterial\tVersion\tVR\tProduct Url\tOtherAttribute";
+
+
+
+public string Series = "";
+public string Type = "";
+public string Material = "";
+public string Version = "";
+public string VR = "";
+
+
+element.Series = GetFieldValue_priceInfoWatch(characteristicDiv, "Σειρά");
+element.Type = GetFieldValue_priceInfoWatch(characteristicDiv, "Τύπος");
+element.Material = GetFieldValue_priceInfoWatch(characteristicDiv, "Υλικό");
+element.Version = GetFieldValue_priceInfoWatch(characteristicDiv, "Έκδοση");
+element.VR = GetFieldValue_priceInfoWatch(characteristicDiv, "VR");
+
+if (element1.Series != "") { element1.Series = "<en-Series>'" + element1.Series + @"'</en-Series>"; }
+if (element1.Type != "") { element1.Type = "<en-Type>'" + element1.Type + @"'</en-Type>"; }
+if (element1.Material != "") { element1.Material = "<en-Material>'" + element1.Material + @"'</en-Material>"; }
+if (element1.Version != "") { element1.Version = "<en-Version>'" + element1.Version + @"'</en-Version>"; }
+if (element1.VR != "") { element1.VR = "<en-VR>'" + element1.VR + @"'</en-VR>"; }
+
+
+
